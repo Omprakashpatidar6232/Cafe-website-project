@@ -787,7 +787,14 @@ header .navbar {
     }
 }
 
-/* Tablet: show 4 dots */
+/* Mobile: 600px and below */
+@media screen and (max-width: 600px) {
+    .pagination-dot:nth-child(n+4) {
+        display: none;
+    }
+}
+
+/* Tablet: 601px to 900px */
 @media screen and (min-width: 601px) and (max-width: 900px) {
     .pagination-dot:nth-child(n+5) {
         display: none;
