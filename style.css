@@ -12,38 +12,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Prevent horizontal overflow */
-* {
-    box-sizing: border-box;
-}
-
-html, body {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    overflow-x: hidden;
-}
-
-/* Make images responsive */
-img {
-    max-width: 100%;
-}
-
-/* Mobile responsiveness */
-@media screen and (max-width: 600px) {
-    .section-content {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .gallery-list,
-    .contact-section,
-    .footer-section {
-        width: 100%;
-        max-width: 100%;
-    }
-}
-
 :root {
     /* Colors */
     --white-color: #fff;
@@ -799,7 +767,7 @@ header .navbar {
     }
 }
 
-/* Mobile */
+/* Mobile: 600px and below */
 @media screen and (max-width: 600px) {
     .gallery-list {
         grid-template-columns: 1fr;
@@ -809,18 +777,25 @@ header .navbar {
     .gallery-item img {
         height: 220px;
     }
-}
 
+    .testimonial-item {
+        flex: 0 0 100%;
+    }
 
-/* Laptop: show 3 dots */
-@media screen and (min-width: 901px) {
-    .pagination-dot:nth-child(n+4) {
+    .pagination-dot:nth-child(n+6) {
         display: none;
     }
 }
 
-/* Mobile: 600px and below */
-@media screen and (max-width: 600px) {
+/* Tablet: 601px to 900px */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .pagination-dot:nth-child(n+5) {
+        display: none;
+    }
+}
+
+/* Laptop and desktop: 901px and above */
+@media screen and (min-width: 901px) {
     .pagination-dot:nth-child(n+4) {
         display: none;
     }
@@ -832,6 +807,7 @@ header .navbar {
         display: none;
     }
 }
+
 /* testimonials Tablet */
 @media screen and (max-width: 900px) {
     .testimonials-section .section-title {
@@ -1002,5 +978,37 @@ header .navbar {
     }
     .menu-section .menu-list{
         gap: 60px;
+    }
+}
+
+/* Prevent horizontal overflow */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 600px) {
+    .section-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .gallery-list,
+    .contact-section,
+    .footer-section {
+        width: 100%;
+        max-width: 100%;
     }
 }
