@@ -156,3 +156,14 @@ function handleSwipe() {
 
     slideTestimonials();
 }
+
+
+// Close mobile menu when clicking any navigation link
+
+const navLinks = document.querySelectorAll(".nav-menu .nav-link");
+
+navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        document.body.classList.remove("show-mobile-menu");
+    });
+});
