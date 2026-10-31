@@ -12,6 +12,38 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Prevent horizontal overflow */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 600px) {
+    .section-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .gallery-list,
+    .contact-section,
+    .footer-section {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
 :root {
     /* Colors */
     --white-color: #fff;
